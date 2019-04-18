@@ -1,0 +1,10 @@
+# To see more examples, please see
+# /usr/share/doc/sshguard/examples/whitelistfile.example
+
+# Address blocks in CIDR notation
+{% for host in sshguard_default_whitelist %}
+{{ host }}
+{% endfor %}
+{% for host in sshguard_whitelist %}
+{{ host }}
+{% endfor %}

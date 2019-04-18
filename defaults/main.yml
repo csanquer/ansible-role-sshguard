@@ -1,0 +1,5 @@
+---
+# Ipv4 or IPv6 address (with or without CIDR) or hostnames
+sshguard_whitelist: []
+  # - "127.0.0.0/8"
+  # - "::1/128"

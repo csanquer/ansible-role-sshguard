@@ -1,0 +1,17 @@
+---
+- name: install dependencies
+  apt:
+    name:
+      - sshguard
+    state: present
+
+- name: create sshguard whitelist
+  template:
+    src: whitelist.j2
+    dest: /etc/sshguard/whitelist
+    owner: root
+    group: root
+    mode: 'u=rw,go=r'
+    backup: yes
+  notify:
+    - restart sshguard server
